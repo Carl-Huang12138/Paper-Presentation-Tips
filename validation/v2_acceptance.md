@@ -1,6 +1,6 @@
 # v2 实际输入验收记录
 
-输入：`Paper-Presentation-Tips-editable-22-v2.pptx`。测试材料 README 在审阅前用于确认文件结构和覆盖范围；逐页问题依据 PPTX 对象与渲染画面独立记录，未按正反标签直接赋值。源码 ZIP 在审阅后只用于核对包内素材。原 PPTX 未改写；输入 SHA-256 存在 `audit-v2/inventory.json`。
+输入：`Paper-Presentation-Tips-editable-22-v2.pptx`。测试材料 README 在审阅前用于确认文件结构和覆盖范围；逐页问题依据 PPTX 对象与渲染画面独立记录，未按正反标签直接赋值。源码 ZIP 在审阅后只用于核对包内素材。原 PPTX 未改写；输入 SHA-256 存在 `validation/v2_review.json`。完整清单、PNG 和报告保存在本地 `audit-v2/`，未随 PR 上传。
 
 ## 覆盖和结果
 
@@ -22,3 +22,4 @@
 - 本输入没有真正的组合对象或 SmartArt/OLE 实例，因此递归组合读取和这些对象的降级路径尚未得到本材料验证。
 - LibreOffice 渲染结果可能与 PowerPoint 字体替换、动画和特殊对象表现不同。当前测试仅验证静态放映页。
 - 输入不是原始论文和数据集；报告不验证论文结论、引文真实性或数值的外部出处。
+
