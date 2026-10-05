@@ -1,0 +1,1 @@
+-r skills/academic-pptx-review/requirements.txt

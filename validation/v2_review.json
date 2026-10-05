@@ -1,0 +1,552 @@
+{
+  "input_sha256": "97072d949785756fc582421e5b56afdb9f8a57d536f6862794a355567944cff1",
+  "reviewer": "Codex visual review of all 22 rendered PNGs, before consulting the source ZIP",
+  "slides": [
+    {
+      "slide": 1,
+      "render_sha256": "57ffb8b44ed807939de3bd23ce1ee4fc07174633a9bb753d1989537653decbfa",
+      "role": "背景/任务定义",
+      "status": "有确定问题",
+      "basis": "两段正文在放映画面中连续铺满左半页；对象树显示 shape-4 与 shape-6 合计长篇定义，视觉上缺少先抓住任务输入输出的路径。",
+      "visual_observations": [
+        {
+          "observation": "机器翻译和图像描述各有标题与密集段落，页面没有图示。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:left-body",
+          "category": "文字可读性",
+          "evidence": "shape-4 与 shape-6 是两段长定义，渲染后形成大块连续小字。",
+          "impact": "听众需边听边读长段落，难以迅速分辨两项任务的输入与输出。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            1
+          ],
+          "direction": "保留两项任务的关键输入输出和一个示例；其余定义细节交给口头说明或后续页。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 2,
+      "render_sha256": "6fa3625f18b1dec28c1c98f79d2d34bf3599db73260cbf717788ff0645b57d06",
+      "role": "背景/任务定义",
+      "status": "无需修改",
+      "basis": "两项任务分别用短定义与可见例子解释；英文到中文的词块和猫图到一句描述构成清楚的输入输出。",
+      "visual_observations": [
+        {
+          "observation": "shape-37 为猫照片，右侧文字说明是一只小猫站在桌子上；词块与箭头均可见。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": []
+    },
+    {
+      "slide": 3,
+      "render_sha256": "b2071b805643320a8834acae9f90f1198e2ce4be0ae0b1dd0870603322ffc9bf",
+      "role": "背景/问题定位",
+      "status": "有确定问题",
+      "basis": "同页摆放 9×7 对照表、问题段落以及问题总结、方法要点、实验结论三个卡片；下方三卡片留白大而文字集中在底部。",
+      "visual_observations": [
+        {
+          "observation": "上半页有密集数值表，右侧问题列表，下半页三张卡片跨越问题、方法和实验。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:whole-slide",
+          "category": "内容叙事",
+          "evidence": "shape-3 表格、shape-4 问题、shape-6/9/12 三类卡片同时争夺主线，渲染中没有突出当前要证明的一个结论。",
+          "impact": "听众不易判断此页该先读表、理解问题，还是听方法与实验结论。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            2,
+            9
+          ],
+          "direction": "先确定本页承担的问题定位；把方法和实验结论移到相应页面，表格仅保留支持问题的关键比较。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 4,
+      "render_sha256": "3c9c756c8b4781699a43376433b0423f55af9b06b41a892984f6d70d04937e5b",
+      "role": "背景/问题定位",
+      "status": "需要人工确认",
+      "basis": "问题句、三个成本/稳定性/泛化提示和右侧趋势示意形成清楚的阅读顺序；曲线没有刻度与数据来源，需确认它是否被当作实测证据。",
+      "visual_observations": [
+        {
+          "observation": "右侧是一条先升后略降的示意曲线，图内标注收益趋于饱和，未见数值刻度。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "右侧曲线可能只是概念图；若用于陈述实验趋势，应标明示意性质或补上数据与来源。"
+      ]
+    },
+    {
+      "slide": 5,
+      "render_sha256": "6213c5f1a52c55e4c79a9ca7f0f85b8d3202769e647ac6f71e379aa9173a8197",
+      "role": "实验/证据",
+      "status": "有确定问题",
+      "basis": "11×5 原生表格与三条发现可读，但页标题只有“实验”，没有告知本页检验的是指令理解。",
+      "visual_observations": [
+        {
+          "observation": "表格列出模型与多项指标，三条发现位于表格下方。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "shape-1",
+          "category": "视觉层级",
+          "evidence": "标题仅为“实验”，而 shape-3 表格及 shape-4 至 shape-6 实际讨论模糊性判断、缺失细节恢复和总结。",
+          "impact": "听众在看到表格前无法预期要寻找哪类证据。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            3,
+            9
+          ],
+          "direction": "用能概括本页发现的标题指向指令理解能力，并用表内重点位置对应三条发现。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 6,
+      "render_sha256": "d86e8b02953c3edc8e6f78ecf25b7dee386a2e6ac8261d8eaefeb002d3aff02c",
+      "role": "实验/证据",
+      "status": "无需修改",
+      "basis": "标题明确指出指令理解，表格保留了具体指标与数值，并对结论相关单元格作了克制高亮；三条发现与表格基本可对应。",
+      "visual_observations": [
+        {
+          "observation": "11×5 表格仍完整，Summary Intention Coverage Rate 行的 96.37 单元格被绿色突出。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": []
+    },
+    {
+      "slide": 7,
+      "render_sha256": "fcfc2f783bd4a6f8c8b116b83461b188996631e0b9ff39c3e8ddc0916c709093",
+      "role": "背景/挑战",
+      "status": "有确定问题",
+      "basis": "两条挑战和流程、散点图均在，但红色标题、黄色/粉色标记及红色结论同时竞争注意力，部分强调线跨过文字。",
+      "visual_observations": [
+        {
+          "observation": "左侧两段文字附近出现多条不同颜色的高亮横线，右下角为嵌入的双簇散点图。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:left-body",
+          "category": "视觉层级",
+          "evidence": "渲染中黄色与粉色横线分别覆盖或贴近正文，红色又用于流程、挑战标题和结论。",
+          "impact": "听众难分辨哪句话是核心挑战，强调线还影响局部阅读。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            4,
+            5
+          ],
+          "direction": "统一语义相同元素的颜色，只强调最后要记住的挑战句，并移开压在文字附近的装饰线。"
+        }
+      ],
+      "uncertainties": [
+        "shape-21 是位图散点图；点坐标和原始数据未知，不能据此比较数值。"
+      ]
+    },
+    {
+      "slide": 8,
+      "render_sha256": "e3ecbd6211d69eebb2104838c46fd150f8abe0de72ac09d72278d34b640b29d7",
+      "role": "背景/挑战",
+      "status": "无需修改",
+      "basis": "两项挑战与流程、散点图保持稳定左右布局，配色统一，结论“保持跨模态表示对齐”易于找到。",
+      "visual_observations": [
+        {
+          "observation": "右下位图散点图可见两组点云与英文标签，左侧文字、右侧图之间的对应关系清楚。",
+          "source": "rendered_png",
+          "confidence": "中"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "位图散点图的原始点坐标未知。"
+      ]
+    },
+    {
+      "slide": 9,
+      "render_sha256": "1e159130b146c579b114a222118a1cf8211f98ea9718948d6dd7f4be1d8b7dfb",
+      "role": "背景/概念",
+      "status": "有确定问题",
+      "basis": "LVLM 的四种任务流程在上部，上下文学习定义与动物问答示例散在下部，图与文字缺少明确连接。",
+      "visual_observations": [
+        {
+          "observation": "动物问题图片和右下角狮子图片空间分离，读者需自行猜测两者之间的演示关系。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:lower-half",
+          "category": "布局",
+          "evidence": "shape-16 问题、shape-17 图片、shape-19/20 的 ICL 定义及 shape-21/22 的狮子答案分布在不连续区域，渲染中没有可跟随的顺序。",
+          "impact": "听众不易看出示例如何帮助模型得到答案，也难区分任务介绍与 ICL 机制。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            5,
+            6
+          ],
+          "direction": "把问题、示例和答案连成一条可视流程，必要时分开介绍 LVLM 任务与 ICL。"
+        }
+      ],
+      "uncertainties": [
+        "动物图片内部物种与数量未做机器识别；诊断只依据可见布局。"
+      ]
+    },
+    {
+      "slide": 10,
+      "render_sha256": "1c038d8d49aea9ff91d58d1026734129582c9db92b702a8e48b293e8faaf1d9a",
+      "role": "背景/概念",
+      "status": "需要人工确认",
+      "basis": "概念卡、任务行与下方动物问答流程布局清楚；但“少量示例指导”旁只看到一个问题与答案，未区分示例和新问题。",
+      "visual_observations": [
+        {
+          "observation": "左下多动物图片与问题，经机器人图标指向右下狮子图片和答案；上方另有 LVLM 与 ICL 的定义卡。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "若此流程旨在解释 ICL，应确认是否还缺少已示范样本与待解决新样本的区分。"
+      ]
+    },
+    {
+      "slide": 11,
+      "render_sha256": "9d1876e852ce6be9d44081e108290f68e8483824bf05115f5ddcabb1e4879f92",
+      "role": "方法/动机",
+      "status": "有确定问题",
+      "basis": "标题问引入 GRPO 的原因，主体却先列定义、概率比、优势、目标函数和符号，问题情境缺席。",
+      "visual_observations": [
+        {
+          "observation": "五个公式/术语卡占主体；底部另有一行红色说明，未提供具体训练情境。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:main-cards",
+          "category": "内容叙事",
+          "evidence": "shape-4 至 shape-17 依次给出定义与公式，却没有展示 PPO 的资源开销或价值模型问题。",
+          "impact": "听众尚不知道 GRPO 要解决什么，就必须先理解多个新符号。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            7
+          ],
+          "direction": "先用一个训练案例说明价值模型与显存矛盾，再引出组内奖励比较；公式放到问题建立之后。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 12,
+      "render_sha256": "5888164d2887a396ed25419fb7f0ec961625a61fcc0836a5aaad85dc1a005d6e",
+      "role": "方法/动机",
+      "status": "无需修改",
+      "basis": "案例、冲突、追问、概念四阶段有清楚的编号和连接；组内奖励数字只作为机制示例，不被当作实验结论。",
+      "visual_observations": [
+        {
+          "observation": "右栏列出同一问题四个回答及示例分数 0.82、0.45、0.71、0.23，底部展示排序 A>C>B>D。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "分数是本页示意值，未据此推断真实模型表现。"
+      ]
+    },
+    {
+      "slide": 13,
+      "render_sha256": "3a647d9792eadd8156863f9678ca9267214b1f8e7c50282863633ea211e14d9b",
+      "role": "方法/概念",
+      "status": "有确定问题",
+      "basis": "MDP、优化目标、Bellman 方程、Q-learning 更新和核心要素五块公式同时出现，缺少先解释状态、动作、奖励的情境。",
+      "visual_observations": [
+        {
+          "observation": "页面由五个公式卡构成，未见案例图。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:main-cards",
+          "category": "内容叙事",
+          "evidence": "shape-4 至 shape-17 同时引入多层符号；渲染图中没有可把 s、a、r 对应到具体任务的例子。",
+          "impact": "未熟悉强化学习的听众难以理解 Q 更新式中每一项为何存在。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            7
+          ],
+          "direction": "先用可见任务说明状态、动作、奖励，再保留一条与任务直接相关的更新式。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 14,
+      "render_sha256": "776a4f012f5d9566b860b12c7ae756f516b04309ee50296d330165eab6b8532f",
+      "role": "方法/概念",
+      "status": "无需修改",
+      "basis": "迷宫案例把机器人位置、动作、奖惩和更新式连到同一任务；路径与终点提供直觉，公式成为补充。",
+      "visual_observations": [
+        {
+          "observation": "原生迷宫格、点状路线与独立机器人/奖杯图片可见；奖励文字位于任务图旁。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "机器人和奖杯是图片对象；其内部细节不作为数据。"
+      ]
+    },
+    {
+      "slide": 15,
+      "render_sha256": "40c7b20b58d1b56aba2e77248688716312a0ce7ceb21d15a9865e5f539e734cc",
+      "role": "方法/创新",
+      "status": "有确定问题",
+      "basis": "三个创新点写成大段文字，底部简图只对应部分流程，听众难把每段长描述映射到图像块、编码器和迁移。",
+      "visual_observations": [
+        {
+          "observation": "三段长说明自上而下占据大面积，底部仅有猫图和四节点流程。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:main-body",
+          "category": "文字可读性",
+          "evidence": "shape-3、shape-4、shape-5 合计约 450 个字符，视觉上形成三段密集说明；底部简单流程缺少与第三段迁移任务的对应。",
+          "impact": "听众要读完长句才能辨认三项创新之间的不同作用。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            1,
+            8
+          ],
+          "direction": "为每项创新保留一句功能陈述，并分别用图像切块、全局建模和预训练迁移流程承载细节。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 16,
+      "render_sha256": "9d91e1ee7fcb0d63d869a0daba870b507a50c832e4cbad464f873dd6aa1d7ccb",
+      "role": "方法/创新",
+      "status": "无需修改",
+      "basis": "三项创新各占一行，文字标题、图像块序列、编码器流程和预训练迁移的视觉对应清楚。",
+      "visual_observations": [
+        {
+          "observation": "七张独立图片用于猫图与 patch 示例，其余节点和箭头为原生对象。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": [
+        "patch 图片内部像素不是可编辑的文本或数据。"
+      ]
+    },
+    {
+      "slide": 17,
+      "render_sha256": "340d8a8bc3944b7e2917dd66cdf93ac0d36e72f1a9262c02d008e8e18ffe2ab6",
+      "role": "实验/证据",
+      "status": "有确定问题",
+      "basis": "7×4 表格下方又逐字列出同一组结果，结论也只是把 Hybrid 的三项最优重复一次。",
+      "visual_observations": [
+        {
+          "observation": "表格、实验观察和实验结论形成三层重复信息，关键行列没有突出。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:lower-half",
+          "category": "图表表达",
+          "evidence": "shape-5 重述表格中的平均回报和成功率，shape-7 再列 Hybrid 平均回报、成功率、AUC 最高；重复占据下半页。",
+          "impact": "听众需要来回比对文本与表格，不能一眼看到 Hybrid 的优势与训练时长的代价。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            9
+          ],
+          "direction": "在表格里突出支持结论的 Hybrid 数值，直接写一条带权衡的最终结论。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 18,
+      "render_sha256": "e6845efa438ad27d4588dfe6e453bad07ef7e0e8a478025f98dd6443d6ebefab",
+      "role": "实验/证据",
+      "status": "无需修改",
+      "basis": "原生表格突出 Hybrid 的五项最优指标，旁边给出训练时间略长的代价，底部总结合乎表内六项指标。",
+      "visual_observations": [
+        {
+          "observation": "Hybrid 列五个单元格被绿色突出，训练时长 2.09 h 未突出；底部写 6 项中 5 项最优。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [],
+      "uncertainties": []
+    },
+    {
+      "slide": 19,
+      "render_sha256": "1e482ce0f6399403a80603da712578a8adf19fb8d34d0195c47c1d437f207b56",
+      "role": "实验/证据",
+      "status": "有确定问题",
+      "basis": "10×8 原生表格几乎占满页面，只有主题标题，没有告诉听众应比较平均准确率还是相对长度。",
+      "visual_observations": [
+        {
+          "observation": "表内模型、多个数据集准确率、平均准确率和相对长度均可见，但没有表外结论。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "shape-3",
+          "category": "图表表达",
+          "evidence": "整页只有数据表 shape-3，包含九个方法和七项数值列；未突出 Ours 与基准的两项关键比较。",
+          "impact": "听众要自行从几十个数字中找出准确率和长度的结论。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            9,
+            10
+          ],
+          "direction": "提取与主张直接相关的平均准确率和相对长度对照，并写清比较对象；保留完整表作为备份。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 20,
+      "render_sha256": "b3860ebaf8516a40cc2abf4d2676c9211ba993c9339e6a1171ae9179346d6c95",
+      "role": "实验/证据",
+      "status": "有确定问题",
+      "basis": "双图的数值与视觉方向清楚，但页首主张“相比其他稀疏注意力方法”，而图例只列“基准”和“Ours”，当前画面不能直接支撑这项跨方法比较。",
+      "visual_observations": [
+        {
+          "observation": "shape-7 两组准确率为 51.5/56.2 和 65.9/68.3；shape-8 相对长度为 300/253 和 314.2/263.3，与渲染柱形方向一致。",
+          "source": "pptx_chart_data+rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "shape-4",
+          "category": "学术证据",
+          "evidence": "shape-4 声称优于其他稀疏注意力方法，但 shape-7/8 的图例只有基准与 Ours，未显示其他方法名称或数值。",
+          "impact": "听众可能把与自家基准的改进误听成对其他方法的全面优势。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            9,
+            10
+          ],
+          "direction": "把主张限定为图中实际比较的基准，或补充其他稀疏注意力方法的可核验对照。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 21,
+      "render_sha256": "3a62d4e837a8b073d0949a54afd8ae51cf785c44c015ab4e35920d0586e9054f",
+      "role": "总结/收尾",
+      "status": "有确定问题",
+      "basis": "结尾页只有 THANKS、Q&A 和感谢聆听，没有回扣研究问题、方法或结果。",
+      "visual_observations": [
+        {
+          "observation": "整页中央是 THANKS 与 Q&A，未见任何工作总结。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:whole-slide",
+          "category": "内容叙事",
+          "evidence": "可见文本仅有标题、THANKS、Q&A、感谢聆听，缺少任务、方法和结论。",
+          "impact": "听众在离场前得不到对贡献与证据的最后一次回顾。",
+          "severity": "中",
+          "confidence": "高",
+          "tips": [
+            11
+          ],
+          "direction": "在致谢前增加一页或一个区域，用任务、方法、最重要结果完成总结。"
+        }
+      ],
+      "uncertainties": []
+    },
+    {
+      "slide": 22,
+      "render_sha256": "2c4fdbd0f40fdf2345e73b7935965666d64133a758e53b504e3e8967f0a43435",
+      "role": "总结/收尾",
+      "status": "有确定问题",
+      "basis": "背景、方法、实验三栏结构已形成，但每栏仍有红色“这个框可以图文并茂...”占位说明，无法作为正式总结。",
+      "visual_observations": [
+        {
+          "observation": "三栏各有机器人/目标、方法文字或成功率图，同时保留显眼红色占位语。",
+          "source": "rendered_png",
+          "confidence": "高"
+        }
+      ],
+      "issues": [
+        {
+          "object": "region:three-columns",
+          "category": "内容叙事",
+          "evidence": "shape-8、shape-16、shape-22 仍是介绍如何填充栏目的占位话语，并未说出本报告具体背景、方法和实验发现。",
+          "impact": "听众最后读到的是制作提示，而不是研究贡献。",
+          "severity": "高",
+          "confidence": "高",
+          "tips": [
+            11
+          ],
+          "direction": "以真实研究动机、方法核心与实验结论替换三处占位文本，并确认右栏成功率图与总结一致。"
+        }
+      ],
+      "uncertainties": [
+        "shape-19 图表数值 84、71、96 可读取，但其与真实论文的对应关系不在本 PPTX 中可核验。"
+      ]
+    }
+  ]
+}
