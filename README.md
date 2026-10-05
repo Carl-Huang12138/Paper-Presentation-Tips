@@ -524,3 +524,61 @@
 - [Academic-Poster-Template](https://github.com/MLNLP-World/Academic-Poster-Template) — 面向科研展示的开源学术海报模板与 README 设计参考
 
 感谢所有为科研写作、学术交流与 Paper Presentation 分享经验的研究者和社区贡献者。
+
+
+## 学术 PPTX 润色审阅 Skill
+
+提供只分析、不修改输入的学术 PPTX 审阅流程：结合逐页对象与渲染，检查内容组织、整体布局、字体和图表表达，提供有证据的修改方案，并允许优秀页面“无需修改”。
+
+### 通用完整包
+
+唯一维护源：[skills/academic-pptx-review](skills/academic-pptx-review/SKILL.md)。其中包含运行模块、Python 依赖、11 条建议和输出 schema 说明，整体复制后可离开原仓库运行。
+
+- [使用与输出说明](skills/academic-pptx-review/references/usage.md)
+- [安装、框架调用与自定义 Agent 接入](skills/academic-pptx-review/references/frameworks.md)
+- [验证范围](validation/v7_acceptance.md)
+
+仓库内 Codex 与 Claude Code 的发现入口由工具生成，均加载同一通用包。安装到另一个项目时，在本仓库运行（PROJECT 替换为绝对项目路径）：
+
+```bash
+python tools/install_skill.py --agent codex --project "PROJECT"
+python tools/install_skill.py --agent claude --project "PROJECT"
+python tools/install_skill.py --agent opencode --project "PROJECT"
+```
+
+选择实际使用的框架即可；每条命令复制整个包，目标已有内容时默认拒绝覆盖。其他宿主可用 `--destination "SKILLS_DIR/academic-pptx-review"`。明确更新时加 `--overwrite`，保留旧安装备份。
+
+### 准备、看图、导入
+
+安装 Python 3.10+、Python 依赖和 LibreOffice。在仓库内保留原命令用法：
+
+```bash
+python -m pip install -r requirements.txt
+python analyze_pptx.py input.pptx --out review-run-1
+```
+
+独立安装后，将 SKILL_DIR 替换为实际包目录绝对路径：
+
+```bash
+python -m pip install -r "SKILL_DIR/requirements.txt"
+python "SKILL_DIR/scripts/analyze_pptx.py" "INPUT.pptx" --out "OUTPUT_DIR"
+```
+
+准备命令产出对象、PNG 和待填写模板，不代表已经完成视觉审阅。Agent 须实际逐页看图并填写本次快照的 review.json，再导入：
+
+```bash
+python "SKILL_DIR/scripts/analyze_pptx.py" "INPUT.pptx" --out "OUTPUT_DIR" --review "OUTPUT_DIR/review.json" --require-evidence
+```
+
+完整流程需要文件访问、执行命令和图片查看能力；只读 OCR/文字不足以确认视觉质量。核心未知或缺字保留未完成状态。包格式与安装兼容不等于已验证所有 Agent 的诊断效果。
+
+### 开发与测试
+
+规则与运行实现只修改通用包。同步仓库入口并运行回归：
+
+```bash
+python tools/install_skill.py --sync-entries --project .
+python -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+根目录 Python 文件是兼容转发入口。私人验收材料不附在公开仓库，相关测试缺少输入时明确跳过。

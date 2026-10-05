@@ -1,2 +1,1 @@
-python-pptx>=1.0,<2
-PyMuPDF>=1.24,<2
+-r skills/academic-pptx-review/requirements.txt
