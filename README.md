@@ -439,8 +439,11 @@
 | 7 | [PPT Speech Writer](https://github.com/AI272/speaker/blob/main/ppt-speech-writer/SKILL.md) | 为 PPT 逐页生成讲稿，并进行汇报时间规划 |
 | 8 | [Markdown Slide Decks](https://github.com/borghei/Claude-Skills/blob/main/markdown-html/md-slides/SKILL.md) | 将 Markdown 转换为可直接浏览的 HTML Slides |
 | 9 | [HTML Presentation Skill](https://github.com/wbohanw/html-presentation/blob/main/SKILL.md) | 制作可直接浏览与分享的 HTML Presentation 页面 |
+| 10 | [学术 PPT 生成与润色 Skill](./docs/ppt-master.md) | 结合本仓库建议，从论文生成汇报或润色已有 PPT；支持参考图确认与原生可编辑 PPTX 制作 |
 
 </div>
+
+本仓库提供基于 PPT Master 的学术定制 Skill，支持 Codex、Claude Code 等 Agent。成品对照、Prompt 和安装方式见 [Skill 展示](./docs/ppt-master.md)，详细流程见 [使用说明](./docs/usage.md)。
 
 <br/>
 
