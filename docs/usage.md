@@ -109,4 +109,4 @@ python skills/ppt-master/scripts/visual_review.py "PROJECT"
 | 图片中文字或数值不清楚 | 放大查看，区分精确值、近似读图值和无法辨认项 |
 | 命令执行不可用 | 保留具体错误，继续可独立完成的内容工作 |
 
-成品展示、来源与许可证见 [学术 PPT 生成与润色](ppt-master.md)。
+成品展示、来源与许可证见 [学术 PPT 生成与润色](../README.md#academic-ppt-skill)。
