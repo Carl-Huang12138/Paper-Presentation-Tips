@@ -586,6 +586,24 @@ python -m pip install -r skills/ppt-master/requirements.txt
 
 <br/>
 
+## 👥 贡献者列表
+
+<p align="left">
+  <b>感谢以下成员对本项目贡献</b>
+</p>
+
+<p align="left">
+  <a href="https://github.com/Carl-Huang12138">
+    <img src="https://images.weserv.nl/?url=github.com/Carl-Huang12138.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/pao29342">
+    <img src="https://images.weserv.nl/?url=github.com/pao29342.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+
+</p>
+
+<br/>
+
 ---
 
 ## 🤝 欢迎贡献
